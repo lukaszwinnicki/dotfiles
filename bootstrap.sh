@@ -1,7 +1,7 @@
 ###### Variables
 
 dir=~/dotfiles                    # dotfiles directory
-files=".bash_profile .vimrc .aliases"            # list of files/folders to symlink in homedir
+files=".bash_profile .vimrc .aliases .functions"
 
 ##########
 
