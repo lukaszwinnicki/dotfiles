@@ -2,3 +2,7 @@
 function mkd() {
     mkdir -p "$@" && cd "$_";
 }
+
+function docker_kill() {
+    docker rm -f $(docker ps | grep "$@" | awk '{print $1}')
+}
