@@ -4,5 +4,5 @@ function mkd() {
 }
 
 function docker_kill() {
-    docker rm -f $(docker ps | grep "$@" | awk '{print $1}')
+    docker rm -f $(docker ps -a | grep "$@" | awk '{print $1}')
 }
