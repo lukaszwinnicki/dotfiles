@@ -1,7 +1,7 @@
 ###### Variables
 
 dir=~/dotfiles                    # dotfiles directory
-files=".bash_profile .vimrc .aliases .functions .paths .tmux.conf"
+files=".bash_profile .vimrc .aliases .functions .paths .tmux.conf z.sh"
 
 ##########
 
