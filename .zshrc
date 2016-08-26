@@ -7,8 +7,8 @@ export ZSH=/Users/lwinnicki/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="jreese"
 #ZSH_THEME="lambda"
-ZSH_THEME="muse"
-#ZSH_THEME="agnoster"
+#ZSH_THEME="muse"
+ZSH_THEME="agnoster"
 DEFAULT_USER="lwinnicki"
 
 # Uncomment the following line to use case-sensitive completion.
