@@ -58,7 +58,7 @@ plugins=(git composer web-search wd history docker colored-man-pages copyfile co
 
 # User configuration
 
-export PATH="/Users/lwinnicki/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/go/bin:/srv/custom/go/gopath/bin"
+export PATH="/Users/lwinnicki/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/go/bin/go:/srv/custom/go/gopath/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
