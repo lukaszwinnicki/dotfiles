@@ -1,2 +1,4 @@
 export GOPATH=~/srv/custom/golang
 export PATH=/usr/local/php5/bin:$PATH
+
+source ~/.custom_paths

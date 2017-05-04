@@ -54,7 +54,7 @@ DEFAULT_USER="lwinnicki"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git composer vi-mode web-search wd history)
-plugins=(git composer web-search wd history docker colored-man-pages copyfile copydir vi-mode)
+plugins=(git composer web-search wd history docker colored-man-pages copyfile copydir)
 
 # User configuration
 
