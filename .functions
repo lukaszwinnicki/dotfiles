@@ -58,6 +58,7 @@ function fcompreq() {
     local package
     package_full=$(composer search $@ | fzf)
     package=$(echo $package_full | cut -d ' ' -f 1)
+    echo "Installing $package package"
     composer require "$package"
 }
 
