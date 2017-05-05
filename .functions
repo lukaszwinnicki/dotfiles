@@ -34,3 +34,9 @@ function fdd() {
                   -o -type d -print 2> /dev/null | fzf +m) &&
   cd "$dir"
 }
+
+function fcall() {
+  local subject
+  subject=$(ls -a | fzf +m)
+  eval "$@ $subject"
+}
