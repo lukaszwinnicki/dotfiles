@@ -21,8 +21,14 @@ function fkill() {
   fi
 }
 
-# fd - cd to selected directory
-fd() {
+function fd() {
+  local dir
+  dir=$(find ${1:-.} -type d -maxdepth 1 -mindepth 1 | fzf +m)
+  cd "$dir"
+}
+
+# fdd - cd to selected directory
+function fdd() {
   local dir
   dir=$(find ${1:-.} -path '*/\.*' -prune \
                   -o -type d -print 2> /dev/null | fzf +m) &&
