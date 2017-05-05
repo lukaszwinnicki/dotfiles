@@ -53,10 +53,16 @@ function fdokill() {
     docker rm -f -v $(docker ps -a --format {{.Names}} | fzf -m )
 }
 
-function fcompreq () {
+function fcompreq() {
     local package_full
     local package
     package_full=$(composer search $@ | fzf)
     package=$(echo $package_full | cut -d ' ' -f 1)
     composer require "$package"
+}
+
+function fcompup() {
+    local package
+    package=$(composer info -s | cut -d ' ' -f 1 | fzf)
+    composer update "$package"
 }
