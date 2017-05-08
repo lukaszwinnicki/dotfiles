@@ -67,3 +67,9 @@ function fcompup() {
     package=$(composer info -s | cut -d ' ' -f 1 | fzf)
     composer update "$package"
 }
+
+function fmake() {
+    local subject
+    subject=$(grep ':' Makefile | cut -d ':' -f 1 | fzf)
+    make "$subject"
+}
