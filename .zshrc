@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/lwinnicki/.oh-my-zsh
+export ZSH=/Users/lukaszwinnicki/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -8,8 +8,9 @@ export ZSH=/Users/lwinnicki/.oh-my-zsh
 #ZSH_THEME="jreese"
 #ZSH_THEME="lambda"
 #ZSH_THEME="muse"
-ZSH_THEME="agnoster"
-DEFAULT_USER="lwinnicki"
+ZSH_THEME="avit"
+#ZSH_THEME="agnoster"
+DEFAULT_USER="lukaszwinnicki"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -54,7 +55,7 @@ DEFAULT_USER="lwinnicki"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git composer vi-mode web-search wd history)
-plugins=(git composer web-search wd history docker colored-man-pages copyfile copydir)
+plugins=(git composer web-search wd history docker colored-man-pages copyfile copydir z)
 
 # User configuration
 
