@@ -53,6 +53,14 @@ function fdokill() {
     docker rm -f -v $(docker ps -a --format {{.Names}} | fzf -m )
 }
 
+function fdormi() {
+    local image
+    local image_id
+    image=$(docker images | fzf)
+    image_id=$(echo $image | awk '{print $3}')
+    docker rmi -f $image_id
+}
+
 function fcompreq() {
     local package_full
     local package
