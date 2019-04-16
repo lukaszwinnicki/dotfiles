@@ -8,7 +8,8 @@ export ZSH=/Users/lwinnicki/.oh-my-zsh
 #ZSH_THEME="jreese"
 #ZSH_THEME="lambda"
 #ZSH_THEME="muse"
-ZSH_THEME="agnoster"
+ZSH_THEME="avit"
+#ZSH_THEME="agnoster"
 DEFAULT_USER="lwinnicki"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -54,7 +55,7 @@ DEFAULT_USER="lwinnicki"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git composer vi-mode web-search wd history)
-plugins=(git composer web-search wd history docker colored-man-pages copyfile copydir)
+plugins=(git composer web-search wd history docker colored-man-pages copyfile copydir z)
 
 # User configuration
 
@@ -92,3 +93,9 @@ set -o vi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.bash_profile
 source ~/z.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/lwinnicki/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lwinnicki/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/lwinnicki/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lwinnicki/google-cloud-sdk/completion.zsh.inc'; fi
