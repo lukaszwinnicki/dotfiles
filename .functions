@@ -49,7 +49,7 @@ function fcall() {
 function fdoex() {
     local container_name
     container_name=$(docker ps --format {{.Names}} | fzf)
-    docker exec -ti "$container_name" bash
+    docker exec -e COLUMNS="`tput cols`" -e LINES="`tput lines`" -ti "$container_name" bash
 }
 
 #  docker kill
