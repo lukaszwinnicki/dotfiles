@@ -40,6 +40,8 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
+alias lg="lazygit"
+
 # GIT
 alias gcd="git checkout develop"
 alias gcm="git checkout master"
