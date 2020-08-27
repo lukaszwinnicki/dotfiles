@@ -65,6 +65,12 @@ function fdormi() {
     docker rmi -f $image_id
 }
 
+function fkubex() {
+    local pod_name
+    pod_name=$(kubectl get pods --no-headers -o custom-columns=":metadata.name" | fzf)
+    kubectl exec -ti "$pod_name" bash
+}
+
 function fcompreq() {
     local package_full
     local package
