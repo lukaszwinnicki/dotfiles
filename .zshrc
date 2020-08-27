@@ -8,7 +8,8 @@ export ZSH=/Users/lwinnicki/.oh-my-zsh
 #ZSH_THEME="jreese"
 #ZSH_THEME="lambda"
 #ZSH_THEME="muse"
-ZSH_THEME="avit"
+#ZSH_THEME="avit"
+ZSH_THEME="agnoster"
 #ZSH_THEME="agnoster"
 DEFAULT_USER="lwinnicki"
 
