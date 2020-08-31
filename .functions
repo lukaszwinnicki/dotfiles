@@ -52,6 +52,12 @@ function fdoex() {
     docker exec -e COLUMNS="`tput cols`" -e LINES="`tput lines`" -ti "$container_name" bash
 }
 
+function fdologsf() {
+    local container_name
+    container_name=$(docker ps --format {{.Names}} | fzf)
+    docker logs -f "$container_name"
+}
+
 #  docker kill
 function fdokill() {
     docker rm -f -v $(docker ps -a --format {{.Names}} | fzf -m )
@@ -68,7 +74,7 @@ function fdormi() {
 function fkubex() {
     local pod_name
     pod_name=$(kubectl get pods --no-headers -o custom-columns=":metadata.name" | fzf)
-    kubectl exec -ti "$pod_name" bash
+    kubectl exec -ti "$pod_name" -- bash
 }
 
 function fcompreq() {
