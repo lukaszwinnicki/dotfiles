@@ -77,6 +77,12 @@ function fkubex() {
     kubectl exec -ti "$pod_name" -- bash
 }
 
+function fkubexsh() {
+    local pod_name
+    pod_name=$(kubectl get pods --no-headers -o custom-columns=":metadata.name" | fzf)
+    kubectl exec -ti "$pod_name" -- /bin/sh
+}
+
 function fcompreq() {
     local package_full
     local package
