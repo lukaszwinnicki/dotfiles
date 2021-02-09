@@ -56,11 +56,11 @@ DEFAULT_USER="lukaszwinnicki"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git composer vi-mode web-search wd history)
-plugins=(git composer web-search wd history docker colored-man-pages copyfile copydir z)
+plugins=(git wd history docker fzf fzf-tab kubectl)
 
 # User configuration
 
-export PATH="/Users/lukaszwinnicki/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/go/bin:/srv/custom/go/gopath/bin"
+export PATH="/Users/lukaszwinnicki/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -92,5 +92,5 @@ set -o vi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.bash_profile
+#source ~/.bash_profile
 source ~/z.sh
