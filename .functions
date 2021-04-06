@@ -52,6 +52,13 @@ function fdoex() {
     docker exec -e COLUMNS="`tput cols`" -e LINES="`tput lines`" -ti "$container_name" bash
 }
 
+#  docker exec from running containers
+function fdosh() {
+    local container_name
+    container_name=$(docker ps --format {{.Names}} | fzf)
+    docker exec -e COLUMNS="`tput cols`" -e LINES="`tput lines`" -ti "$container_name" /bin/sh
+}
+
 function fdologsf() {
     local container_name
     container_name=$(docker ps --format {{.Names}} | fzf)
@@ -69,6 +76,16 @@ function fdormi() {
     image=$(docker images | fzf)
     image_id=$(echo $image | awk '{print $3}')
     docker rmi -f $image_id
+}
+
+function fdormim() {
+    local images
+    local images_ids
+    images=$(docker images | grep -v REPOSITORY | fzf -m)
+    images_ids=$(echo $images | awk '{print $3}')
+    for image_id in $images_ids; do
+        docker rmi -f $image_id
+    done
 }
 
 function fkubex() {
