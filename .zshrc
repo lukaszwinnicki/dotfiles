@@ -56,11 +56,11 @@ DEFAULT_USER="lukaszwinnicki"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git composer vi-mode web-search wd history)
-plugins=(git wd history docker fzf fzf-tab kubectl)
+plugins=(wd history docker fzf fzf-tab kubectl)
 
 # User configuration
 
-export PATH="/Users/lukaszwinnicki/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"
+export PATH="/Users/lukaszwinnicki/bin:/opt/X11/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -94,3 +94,10 @@ set -o vi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #source ~/.bash_profile
 source ~/z.sh
+
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/bit bit
